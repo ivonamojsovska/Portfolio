@@ -18,7 +18,7 @@
 @media (max-width: 500px) {
   body {
     display: grid;
-    grid-template-rows: 15vh 60vh repeat(2, 1fr) 10vh;
+    grid-template-rows: 7rem 30rem repeat(2, 1fr) 10vh;
   }
 
   .mainNav {
