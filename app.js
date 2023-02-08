@@ -19,3 +19,11 @@ $navBtn.on('click', function () {
     })
 })
 
+$(window).scroll(function () {
+    if (window.scrollY > 30) {
+        $navBtn.css("opacity", "0.6")
+    } else (
+        $navBtn.css("opacity", "1")
+    )
+})
+
