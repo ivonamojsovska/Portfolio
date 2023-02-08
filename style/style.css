@@ -89,7 +89,7 @@
     grid-row: 2 / 3;
     display: grid;
     grid-template-rows: 70% 20% 10%;
-    margin: 1rem 0;
+    padding: 1rem 0;
   }
 
   .header_left {
@@ -182,7 +182,7 @@
   .experience_company {
     margin: 0.5rem;
   }
-  .about_resume h3 {
+  .about_resume h2 {
     font-family: "Lora", serif;
     text-transform: lowercase;
   }
