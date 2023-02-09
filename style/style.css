@@ -11,6 +11,10 @@
 .hidden {
   display: none;
 }
+.showElement {
+  opacity: 0;
+}
+
 .quotes {
   font-size: 1.2rem;
 }
@@ -19,10 +23,10 @@
   text-transform: lowercase;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 450px) {
   body {
     display: grid;
-    grid-template-rows: 7rem 30rem 1fr 42rem 7rem;
+    grid-template-rows: 7rem 30rem 1fr 41rem 7rem;
   }
 
   .mainNav {
@@ -133,7 +137,7 @@
   }
 
   .header_img {
-    width: 100%;
+    max-width: 100%;
   }
   .header_quote {
     text-align: center;
@@ -155,7 +159,7 @@
     grid-area: 1 / 1/2 /2;
   }
   .about_img img {
-    width: 100%;
+    max-width: 100%;
   }
   .about_text {
     grid-area: 1 / 2 / 2 / 3;
@@ -240,7 +244,7 @@
     width: 20%;
   }
   .img_icon {
-    width: 100%;
+    max-width: 100%;
   }
   .email_phone {
     display: flex;
@@ -255,10 +259,10 @@
   .img_box {
     width: 50%;
     margin: 0 auto;
-    box-shadow: 4px 4px 5px #9faea3;
+    /* box-shadow: 4px 4px 5px #9faea3; */
   }
   .img_width {
-    width: 100%;
+    max-width: 100%;
   }
   .project {
     text-align: center;
