@@ -45,7 +45,7 @@
   }
 
   .nav_wraper {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -67,16 +67,14 @@
   }
 
   .nav_link {
+    font-family: "Lora", serif;
+    text-transform: lowercase;
     text-decoration: none;
     color: #2c2c2c;
     display: inline-block;
     padding: 0.5rem 1rem;
     border-bottom: none;
     margin: 0.5em;
-  }
-  .nav_link:visited {
-    border-bottom: 1px solid #2c2c2c;
-    transform: all 0.4s;
   }
 
   .nav_item {
@@ -248,6 +246,7 @@
     justify-content: center;
   }
   .email_phone p {
+    font-family: "Lora", serif;
     color: white;
   }
 }
