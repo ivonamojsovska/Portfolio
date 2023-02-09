@@ -1,15 +1,3 @@
-(() => {
-    const $navBtn = $('.nav_btn')
-    $navBtn.on('click', function () {
-        $('.nav_wraper').css('display', 'block')
-    })
-
-
-
-})
-
-console.log('linked')
-
 
 const $navBtn = $('.nav_btn')
 $navBtn.on('click', function () {
@@ -39,7 +27,6 @@ $(document).ready(function () {
             }
         })
     })
-
 
 })
 

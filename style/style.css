@@ -23,7 +23,7 @@
   text-transform: lowercase;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   body {
     display: grid;
     grid-template-rows: 7rem 30rem 1fr 41rem 7rem;
@@ -252,9 +252,14 @@
     align-items: center;
     justify-content: center;
   }
+
   .email_phone p {
     font-family: "Lora", serif;
     color: white;
+  }
+  .email_phone a {
+    color: white;
+    text-decoration: none;
   }
   .img_box {
     width: 50%;
