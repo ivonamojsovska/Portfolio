@@ -1,9 +1,17 @@
+$(document).ready(function () {
+    if ($(window).width() <= 400) {
+        $('.nav_wraper').hide()
+    }
+    else if ($(window).width() > 400) {
+        $('.nav_wraper').show()
+    }
+})
 
 const $navBtn = $('.nav_btn')
 $navBtn.on('click', function () {
-    $('.nav_wraper').css('display', 'block')
+    $('.nav_wraper').show('slow')
     $('.nav_wraper').on('click', function () {
-        $('.nav_wraper').css("display", 'none')
+        $('.nav_wraper').hide('slow')
     })
 })
 
