@@ -439,7 +439,7 @@ img {
     justify-content: space-around;
   }
 }
-
+/* small-medium */
 @media screen and (min-width: 600px) {
   body {
     grid-template-rows: 7rem 25rem 80rem 20rem 5rem;
@@ -531,8 +531,8 @@ img {
     grid-template-rows: 50% 50%;
   }
 }
-
-@media screen and (min-width: 769px) {
+/* medium */
+@media screen and (min-width: 768px) {
   body {
     grid-template-rows: 7rem 30rem 80rem 30rem 5rem;
   }
@@ -540,24 +540,23 @@ img {
     font-size: 1.2rem;
   }
   .header_side-intro h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin-left: -6rem;
   }
   .about_text h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
   .projects h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
-
+/* medium-large */
 @media screen and (min-width: 1024px) {
   body {
     grid-template-rows: 7rem 40rem 90rem 40rem 7rem;
     row-gap: 4rem;
   }
-  .nav_link {
-    font-size: 1.2rem;
-  }
+
   .header_side-img {
     justify-content: flex-start;
   }
@@ -580,6 +579,8 @@ img {
     font-size: 2rem;
   }
 }
+
+/* large */
 @media screen and (min-width: 1440px) {
   .nav_link {
     font-size: 1.5rem;
