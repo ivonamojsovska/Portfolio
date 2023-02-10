@@ -27,11 +27,13 @@ $(window).scroll(function () {
 $(document).ready(function () {
     $(window).scroll(function () {
         $('.showElement').each(function (i) {
-            const bottomOfObject = $(this).position().top + $(this).outerHeight();
-            const bottomOfWindow = $(window).scrollTop() + $(window).height();
+            const bottomOfObject = $(this).position().top
+            //console.log(bottomOfObject)
 
+            const bottomOfWindow = $(window).scrollTop() + $(window).height();
+            //console.log(bottomOfWindow)
             if (bottomOfWindow > bottomOfObject) {
-                $(this).animate({ 'opacity': '1' }, 800)
+                $(this).animate({ 'opacity': '1' }, 2000)
             }
         })
     })

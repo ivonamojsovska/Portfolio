@@ -492,7 +492,7 @@ img {
     font-size: 1.2rem;
   }
   .about {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     row-gap: 2rem;
   }
   .about_img {
