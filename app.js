@@ -33,7 +33,7 @@ $(document).ready(function () {
             const bottomOfWindow = $(window).scrollTop() + $(window).height();
             //console.log(bottomOfWindow)
             if (bottomOfWindow > bottomOfObject) {
-                $(this).animate({ 'opacity': '1' }, 2000)
+                $(this).animate({ 'opacity': '1' }, 3000)
             }
         })
     })
