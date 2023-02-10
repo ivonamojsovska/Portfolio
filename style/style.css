@@ -1,24 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Open+Sans:wght@300&display=swap");
 
+:root {
+  --sage: #9eaa9e59;
+  --textColor: #2c2c2c;
+}
 * {
   font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   font-weight: 300;
-  color: #2c2c2c;
+  color: var(--textColor);
   margin: 0;
   padding: 0;
 }
 
 body {
   display: grid;
+  row-gap: 3rem;
   grid-template-rows: 7rem 30rem 50rem 40rem 5rem;
+}
+
+.nav_list {
+  list-style: none;
 }
 
 .nav_link {
   font-family: "Lora", serif;
   text-transform: lowercase;
   text-decoration: none;
-  color: #2c2c2c;
+  color: var(--textColor);
 }
 
 .hidden {
@@ -58,7 +67,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #9eaa9e59;
+  background-color: var(--sage);
 }
 .header_quote h2 {
   font-family: "Lora", sans-serif;
@@ -97,7 +106,7 @@ img {
   grid-template-columns: 60% 40%;
   padding: 1rem;
   font-size: 0.6rem;
-  background-image: linear-gradient(320deg, #9eaa9e59, transparent);
+  background-image: linear-gradient(320deg, var(--sage), transparent);
 }
 .experience {
   grid-area: 1 / 1 /2 / 2;
@@ -167,18 +176,18 @@ img {
 .img_icon {
   max-width: 100%;
 }
-.email_phone {
+.contact_email-phone {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.email_phone p {
+.contact_email-phone p {
   font-family: "Lora", serif;
   color: white;
 }
-.email_phone a {
+.contact_email-phone a {
   color: white;
   text-decoration: none;
 }
@@ -196,7 +205,7 @@ img {
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
-  .mainNav {
+  .nav {
     grid-column: 1 / -1;
     display: flex;
     justify-content: flex-end;
@@ -208,7 +217,7 @@ img {
     display: block;
     border: none;
     border-radius: 50%;
-    background-color: #9eaa9e59;
+    background-color: var(--sage);
     color: inherit;
     /* margin: 5px 0; */
     cursor: pointer;
@@ -262,16 +271,16 @@ img {
     padding: 1rem 0;
   }
 
-  .header_left {
+  .header_side-img {
     grid-row: 1 /2;
   }
-  .header_right {
+  .header_side-intro {
     grid-row: 2 / 3;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .header_right-text {
+  .header_side-name {
     text-align: center;
   }
   .header_title h1 {
@@ -336,7 +345,7 @@ img {
   body {
     grid-template-rows: 7rem 30rem 70rem 30rem 5rem;
   }
-  .mainNav {
+  .nav {
     display: flex;
     align-items: end;
     justify-content: end;
@@ -365,19 +374,19 @@ img {
     grid-template-rows: 80% 20%;
   }
 
-  .header_left {
+  .header_side-img {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .header_right {
+  .header_side-intro {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .header_right-text {
+  .header_side-name {
     font-size: 1rem;
   }
   .header_title h1 {
@@ -431,5 +440,93 @@ img {
   }
   .projects {
     justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    grid-template-rows: 7rem 40rem 80rem 30rem 7rem;
+  }
+  .nav_btn {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+  .nav_list {
+    display: flex;
+    justify-content: center;
+  }
+  .nav_item {
+    padding-right: 2rem;
+    font-size: 1.2rem;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 85% 15%;
+  }
+  .header_side-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header_side-intro {
+    display: flex;
+    align-items: center;
+  }
+  .header_side-intro h1 {
+    font-size: 3rem;
+    margin-left: -3rem;
+  }
+  .header_side-intro h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .header_quote {
+    grid-column: 1 / -1;
+  }
+  .header_quote h2 {
+    font-size: 1.2rem;
+  }
+  .about {
+    grid-template-columns: 40% 60%;
+    row-gap: 2rem;
+  }
+  .about_img {
+    display: flex;
+  }
+  .about_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10rem;
+  }
+  .about_text h2 {
+    font-size: 2rem;
+  }
+  .about_text p {
+    margin: 1rem 0;
+  }
+  .about_resume {
+    font-size: 0.8rem;
+  }
+
+  .contact_icons {
+    justify-content: center;
+  }
+  .contact_email-phone {
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 1rem;
+  }
+  .icon_width {
+    padding: 1rem;
+  }
+  .projects_grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
   }
 }
