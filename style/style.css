@@ -87,6 +87,8 @@ img {
 
 .about_img {
   grid-area: 1 / 1 /2 /2;
+  display: flex;
+  align-items: center;
 }
 
 .about_text {
@@ -143,9 +145,7 @@ img {
 .projects {
   grid-area: 4 / 1 / 5 / -1;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-self: center;
 }
 .projects h2 {
   font-family: "Lora", serif;
@@ -204,7 +204,34 @@ img {
   margin: 1rem 0 0 0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 400px) {
+@keyframes moveInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+/* extrasmall */
+@media only screen and (max-width: 400px) {
   .nav {
     grid-column: 1 / -1;
     display: flex;
@@ -314,36 +341,11 @@ img {
   }
 }
 
-@keyframes moveInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-@keyframes moveInRight {
-  from {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@media screen and (min-width: 401px) and (max-width: 768px) {
+/* small */
+@media screen and (min-width: 400px) {
   body {
-    grid-template-rows: 7rem 30rem 70rem 30rem 5rem;
+    grid-template-rows: 7rem 40rem 70rem 42rem 5rem;
+    row-gap: 3rem;
   }
   .nav {
     display: flex;
@@ -370,8 +372,6 @@ img {
   .header {
     grid-row: 2 / 3;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 80% 20%;
   }
 
   .header_side-img {
@@ -387,31 +387,33 @@ img {
   }
 
   .header_side-name {
-    font-size: 1rem;
+    text-align: center;
   }
   .header_title h1 {
     font-size: 2rem;
-    margin-left: -6rem;
   }
   .header_subtitle h2 {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
   .header_quote {
     grid-column: 1 / -1;
   }
   .header_quote h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
-  .about {
-    margin: 4rem 0 0 0;
+  .about_img {
+    justify-content: center;
+    grid-area: 1 / 1 /2 /2;
+    display: flex;
+    align-items: center;
   }
 
   .about_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2rem 4rem;
-    font-size: 1rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
   }
 
   .about_text p {
@@ -419,7 +421,6 @@ img {
   }
   .about_resume {
     font-size: 0.8rem;
-    margin: 0 1rem;
   }
   .contact {
     font-size: 0.8rem;
@@ -434,18 +435,14 @@ img {
     justify-content: center;
     gap: 1rem;
   }
-  .projects_grid {
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-  }
   .projects {
     justify-content: space-around;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 600px) {
   body {
-    grid-template-rows: 7rem 40rem 80rem 30rem 7rem;
+    grid-template-rows: 7rem 25rem 80rem 20rem 5rem;
   }
   .nav_btn {
     display: none;
@@ -461,7 +458,7 @@ img {
   }
   .nav_item {
     padding-right: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .header {
     display: grid;
@@ -478,11 +475,10 @@ img {
     align-items: center;
   }
   .header_side-intro h1 {
-    font-size: 3rem;
-    margin-left: -3rem;
+    font-size: 1.7rem;
   }
   .header_side-intro h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-align: center;
   }
   .header_quote {
@@ -492,7 +488,7 @@ img {
     font-size: 1.2rem;
   }
   .about {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     row-gap: 2rem;
   }
   .about_img {
@@ -502,12 +498,13 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 10rem;
+    padding: 2rem;
   }
   .about_text h2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
   .about_text p {
+    font-size: 1rem;
     margin: 1rem 0;
   }
   .about_resume {
@@ -520,12 +517,13 @@ img {
   .contact_email-phone {
     flex-direction: row;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .contact_phone {
     padding-left: 1rem;
   }
   .icon_width {
+    width: 10%;
     padding: 1rem;
   }
   .projects_grid {
@@ -534,30 +532,61 @@ img {
   }
 }
 
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 769px) {
+  body {
+    grid-template-rows: 7rem 30rem 80rem 30rem 5rem;
+  }
+  .nav_link {
+    font-size: 1.2rem;
+  }
+  .header_side-intro h1 {
+    font-size: 2rem;
+  }
+  .about_text h2 {
+    font-size: 1.4rem;
+  }
+  .projects h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   body {
     grid-template-rows: 7rem 40rem 90rem 40rem 7rem;
-    row-gap: 5rem;
+    row-gap: 4rem;
   }
-  .nav_item {
-    font-size: 1.5rem;
+  .nav_link {
+    font-size: 1.2rem;
   }
   .header_side-img {
     justify-content: flex-start;
   }
   .header_side-intro h1 {
-    margin: 0;
-    font-size: 4rem;
+    margin-left: -11.5rem;
+    font-size: 3rem;
   }
 
   .header_side-intro h2 {
     font-size: 1.2rem;
   }
+  .about_text {
+    padding: 0 5rem;
+  }
+  .about_text h2 {
+    font-size: 2rem;
+  }
+
   .projects h2 {
     font-size: 2rem;
   }
 }
 @media screen and (min-width: 1440px) {
+  .nav_link {
+    font-size: 1.5rem;
+  }
+  .header_quote h2 {
+    font-size: 1.5rem;
+  }
   .header {
     row-gap: 5rem;
   }
