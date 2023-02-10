@@ -519,8 +519,11 @@ img {
   }
   .contact_email-phone {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 1rem;
+  }
+  .contact_phone {
+    padding-left: 1rem;
   }
   .icon_width {
     padding: 1rem;
@@ -528,5 +531,29 @@ img {
   .projects_grid {
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  body {
+    grid-template-rows: 7rem 40rem 90rem 40rem 7rem;
+    row-gap: 5rem;
+  }
+  .nav_item {
+    font-size: 1.5rem;
+  }
+  .header_side-img {
+    justify-content: flex-start;
+  }
+  .header_side-intro h1 {
+    margin: 0;
+    font-size: 4rem;
+  }
+
+  .header_side-intro h2 {
+    font-size: 1.2rem;
+  }
+  .projects h2 {
+    font-size: 2rem;
   }
 }

@@ -9,9 +9,9 @@ $(document).ready(function () {
 
 const $navBtn = $('.nav_btn')
 $navBtn.on('click', function () {
-    $('.nav_wraper').show('slow')
+    $('.nav_wraper').show(500)
     $('.nav_wraper').on('click', function () {
-        $('.nav_wraper').hide('slow')
+        $('.nav_wraper').hide(500)
     })
 })
 
