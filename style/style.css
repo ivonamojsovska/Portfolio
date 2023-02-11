@@ -585,14 +585,23 @@ img {
 
 /* large */
 @media screen and (min-width: 1440px) {
+  body {
+    grid-template-rows: 7rem 50rem 120rem 40rem 7rem;
+    row-gap: 4rem;
+  }
   .nav_link {
     font-size: 1.5rem;
+  }
+  .header_side-intro h1 {
+    font-size: 6rem;
+    margin-left: -10rem;
   }
   .header_quote h2 {
     font-size: 1.5rem;
   }
   .header {
     row-gap: 5rem;
+    grid-template-rows: 70% 30%;
   }
   .header_side-img {
     align-items: stretch;
@@ -603,7 +612,18 @@ img {
   .about {
     row-gap: 0;
   }
+  .about h2 {
+    font-size: 3rem;
+  }
   .about_img {
     margin: 3rem 0;
+  }
+
+  .about_text p {
+    font-size: 2rem;
+  }
+  .about_resume {
+    font-size: 1.3rem;
+    padding: 1rem 5rem;
   }
 }
